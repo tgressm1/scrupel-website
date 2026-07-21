@@ -27,5 +27,5 @@ early access" CTA) written to have something real to verify DNS/deploy
 against — replace it with real copy/screenshots once the app is further
 along. The privacy policy at `/privacy` referenced in `index.html` doesn't
 exist yet; the real one currently lives in the main app repo
-(`my-app/public/privacypolicy.html`) and should be ported over before
+(`scrupel-app/public/privacypolicy.html`) and should be ported over before
 launch.
