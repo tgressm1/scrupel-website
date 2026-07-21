@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrupel — Dose tracking for peptides and compounds</title>
+<meta name="description" content="Scrupel is a private, on-device dose-tracking app for peptides and compounds — protocols, injection sites, lab results, and interaction checks in one place.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <img src="favicon.png" alt="" width="28" height="28">
+        Scrupel
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="mailto:support@scrupel.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <span class="eyebrow">Currently in private testing</span>
+      <h1>Track what you're actually running.</h1>
+      <p class="lede">Scrupel is a dose-tracking app for peptides and compounds — protocols, injection-site rotation, lab results, and interaction checks, all in one place. Your data stays on your device.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:support@scrupel.com?subject=Early access">Request early access</a>
+        <a class="btn btn-ghost" href="#features">See what it does</a>
+      </div>
+    </section>
+
+    <section id="features" class="features wrap">
+      <div class="feature">
+        <h3>Protocols, not spreadsheets</h3>
+        <p>Build a protocol per compound — dose, frequency, route, titration schedule — and Scrupel tells you what's due today.</p>
+      </div>
+      <div class="feature">
+        <h3>Injection-site rotation</h3>
+        <p>Tracks where you last injected and how long each site needs to rest, so rotation happens automatically instead of by memory.</p>
+      </div>
+      <div class="feature">
+        <h3>Lab results on the same timeline</h3>
+        <p>Log bloodwork alongside your dose history and see trends the same way your provider would — never a diagnosis, always context.</p>
+      </div>
+      <div class="feature">
+        <h3>Interaction awareness</h3>
+        <p>A research-backed ruleset flags known interactions and cumulative risk across your stack and any prescription medications.</p>
+      </div>
+    </section>
+
+    <section id="privacy" class="privacy wrap">
+      <h2>Your data stays yours</h2>
+      <p>Scrupel is built to run entirely on your device. Nothing about your protocols, doses, or labs is required to leave your phone. Full details will live at <a href="/privacy">/privacy</a> once the app is public.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>&copy; <span id="year"></span> Scrupel</span>
+      <a href="mailto:support@scrupel.com">support@scrupel.com</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

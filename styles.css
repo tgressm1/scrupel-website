@@ -1,0 +1,144 @@
+/* Palette mirrors the Scrupel app's own light/dark tokens (App.jsx's LIGHT/DARK
+   theme objects) so the marketing site and the product feel like one brand. */
+:root {
+  --ink: #111318;
+  --paper: #F0F1EF;
+  --card: #FFFFFF;
+  --line: #E6E9E6;
+  --teal: #26988D;
+  --teal-dk: #1C716A;
+  --slate: #717479;
+  --soft: #F5F6F4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #F2F0EA;
+    --paper: #262523;
+    --card: #302F2C;
+    --line: #43423C;
+    --teal: #2D9288;
+    --teal-dk: #81C7BF;
+    --slate: #A6A399;
+    --soft: #3A3934;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+a { color: var(--teal-dk); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.nav {
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.brand:hover { text-decoration: none; }
+.brand img { border-radius: 7px; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a { color: var(--slate); font-weight: 600; font-size: 14.5px; }
+.nav-links a:hover { color: var(--ink); text-decoration: none; }
+
+.hero {
+  padding: 88px 24px 64px;
+  text-align: center;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal-dk);
+  background: color-mix(in srgb, var(--teal) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--teal) 30%, transparent);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lede {
+  font-size: 17px;
+  color: var(--slate);
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+.cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14.5px;
+}
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-dk); text-decoration: none; }
+.btn-ghost { background: var(--soft); color: var(--ink); border: 1px solid var(--line); }
+.btn-ghost:hover { text-decoration: none; border-color: var(--teal); }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px 24px 80px;
+}
+@media (max-width: 640px) {
+  .features { grid-template-columns: 1fr; }
+}
+.feature {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+.feature h3 { margin: 0 0 8px; font-size: 16.5px; letter-spacing: -0.01em; }
+.feature p { margin: 0; color: var(--slate); font-size: 14.5px; }
+
+.privacy {
+  padding: 20px 24px 88px;
+  text-align: center;
+}
+.privacy h2 { font-size: 24px; margin: 0 0 10px; letter-spacing: -0.01em; }
+.privacy p { color: var(--slate); max-width: 560px; margin: 0 auto; }
+
+.footer { border-top: 1px solid var(--line); padding: 24px 0; }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  color: var(--slate);
+  font-size: 13px;
+}
