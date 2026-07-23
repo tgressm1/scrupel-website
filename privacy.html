@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Privacy Policy — Scrupel</title>
+<meta name="description" content="How Scrupel Labs LLC collects, uses, and protects your information.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="favicon.png" alt="" width="28" height="28">
+        Scrupel
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="https://scrupel.featurebase.app" target="_blank" rel="noopener">Feedback</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:support@scrupel.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap legal">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 23, 2026 &middot; Effective for Scrupel Labs LLC ("Scrupel," "we," "us," or "our")</p>
+
+    <div class="callout">
+      <p><strong>The short version:</strong> almost everything you track in Scrupel — protocols, doses, injection logs, check-ins, and lab values — is stored only on your device and never touches our servers. A few specific features work differently and send data off your device to do their job: importing a lab report or scanning a vial label sends that photo to an OCR service, voice search sends a short audio clip for transcription, and creating an email/password account stores your email and a hashed password with us. Each of these is explained in detail below, including exactly who processes it.</p>
+    </div>
+
+    <nav class="toc">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#health">Apple Health &amp; Health Connect</a></li>
+        <li><a href="#photo-voice">Lab imports, vial scans &amp; voice search</a></li>
+        <li><a href="#use">How we use information</a></li>
+        <li><a href="#no-sell">We do not sell your data</a></li>
+        <li><a href="#processors">Third-party service providers</a></li>
+        <li><a href="#security">Data security</a></li>
+        <li><a href="#retention">Data retention &amp; deletion</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#health-law">Consumer health data notices</a></li>
+        <li><a href="#ccpa">California privacy rights</a></li>
+        <li><a href="#utah">Utah privacy rights</a></li>
+        <li><a href="#other-states">Other U.S. state rights</a></li>
+        <li><a href="#international">International users</a></li>
+        <li><a href="#rights">Exercising your rights</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#medical">Medical disclaimer</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="collect">1. Information we collect</h2>
+    <p>What we collect depends entirely on how you use Scrupel. We designed the app so that the core experience — logging protocols, doses, injection sites, check-ins, and lab values — requires nothing to ever leave your device.</p>
+    <h3>Data that stays on your device</h3>
+    <p>Your protocols, dose schedules, injection-site history, check-ins, medication list, and any lab values you enter or import are stored locally on your device using your operating system's standard app-storage APIs (the same mechanism used by most apps for local settings and data). We do not have a copy of this data, cannot see it, and cannot recover it for you if you lose your device without a backup.</p>
+    <h3>Account information (optional)</h3>
+    <p>Scrupel works without an account. If you choose to create one:</p>
+    <ul>
+      <li><strong>Email &amp; password accounts:</strong> we store your email address and a securely hashed version of your password (never the password itself, using industry-standard PBKDF2 hashing) so we can authenticate you and let you recover access. We also store short-lived session tokens and, if you request one, a one-time email-verification or password-reset token.</li>
+      <li><strong>Google Sign-In:</strong> authentication happens entirely through Google. We receive your name, email, and profile photo from Google to populate your in-app profile, but no separate account record is created on our servers, and we never see or store your Google password.</li>
+    </ul>
+    <h3>Information you choose to submit for processing</h3>
+    <p>Certain optional features require sending a specific piece of content off your device to do their job — see <a href="#photo-voice">Section 3</a> for exactly what happens to it.</p>
+    <h3>Technical information</h3>
+    <p>Our infrastructure provider (Cloudflare) briefly processes standard technical information — such as your IP address — for the sole purpose of rate-limiting and preventing abuse of the services described in Section 3. We do not otherwise log, analyze, or retain this information, and we do not use any analytics, advertising, or crash-reporting software in Scrupel.</p>
+
+    <h2 id="health">2. Apple Health &amp; Health Connect</h2>
+    <p>If you choose to connect Apple Health or Google Health Connect, Scrupel reads the specific metrics you authorize (for example weight, body fat percentage, resting heart rate, heart-rate variability, sleep, steps, blood glucose, blood pressure, VO2 max, calories, respiratory rate, oxygen saturation, or body temperature) so it can display that alongside your dosing history in the app.</p>
+    <p>This access is read-only, with one exception: if you log a weigh-in yourself inside Scrupel, we write that single value back to Apple Health / Health Connect so your other health apps stay in sync. We never write, modify, or delete anything else. All of this happens through your device's own operating system — none of this health data is transmitted to Scrupel's servers or any third party. You can revoke this access at any time in your device's Health or Health Connect settings.</p>
+
+    <h2 id="photo-voice">3. Lab imports, vial scans &amp; voice search</h2>
+    <p>These three optional features are the only ways your tracked content leaves your device:</p>
+    <ul>
+      <li><strong>Lab report import:</strong> the photo or PDF you choose to import is sent to our own server-side proxy, which forwards it to Google's Gemini API to extract the values, and returns them to you for review. Nothing is saved until you confirm it.</li>
+      <li><strong>Vial &amp; box label scanning:</strong> works the same way as lab import — the photo is sent to our proxy, then to Google's Gemini API, to read the compound name, strength, lot, and expiration off the label.</li>
+      <li><strong>Voice search:</strong> a short audio clip of your spoken query is sent to our proxy, which transcribes it using Cloudflare's Workers AI (Whisper model). Google is not involved in voice search.</li>
+    </ul>
+    <p>In every case, the file or audio clip is used only to generate the requested result and is not stored by us afterward. We do not control how Google or Cloudflare's underlying AI models handle data in transit to generate that result, but we do not authorize, and have no reason to believe, that either uses this content to train models or for any purpose beyond returning the extraction/transcription result to our proxy.</p>
+
+    <h2 id="use">4. How we use information</h2>
+    <ul>
+      <li>To provide, maintain, and operate the features described above</li>
+      <li>To authenticate you and keep your account secure</li>
+      <li>To respond to support requests you send us</li>
+      <li>To detect, prevent, and respond to fraud, abuse, or security issues</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not use your information for advertising, do not build advertising or behavioral profiles, and do not use your tracked health data to train any AI model.</p>
+
+    <h2 id="no-sell">5. We do not sell your data — ever</h2>
+    <p>Scrupel does not sell, rent, or license your personal information to data brokers or third parties, and does not share it with anyone for their own marketing purposes. We have no advertising-based business model.</p>
+
+    <h2 id="processors">6. Third-party service providers</h2>
+    <p>We rely on a small number of specific vendors, each limited to a narrow purpose:</p>
+    <ul>
+      <li><strong>Google Gemini API</strong> — OCR extraction for lab-report and vial-label images you choose to submit (Section 3)</li>
+      <li><strong>Cloudflare (Workers, Workers AI, D1, KV)</strong> — hosts our server-side proxy, transcribes voice search audio, stores account records (email/hashed password/sessions) for email/password accounts, and provides rate-limiting</li>
+      <li><strong>Resend</strong> — delivers account verification and password-reset emails</li>
+      <li><strong>Google Sign-In</strong> — handles authentication for users who choose that sign-in method</li>
+      <li><strong>Google Fonts</strong> — loads typefaces used in the app and on this site; this contacts Google's font CDN but transmits no app data beyond the request itself</li>
+      <li><strong>Featurebase</strong> — an independent, separately-operated feedback and roadmap platform we link to from the app and this site. If you submit a feature request or bug report there, that submission is governed by Featurebase's own privacy policy and terms, not this one</li>
+      <li><strong>Apple App Store / Google Play</strong> — if you install Scrupel through these stores, your relationship with them (including any data they collect for distribution, crash reporting at the OS level, or reviews) is governed by their own privacy policies</li>
+    </ul>
+
+    <h2 id="security">7. Data security</h2>
+    <p>We use industry-standard measures to protect the information we do handle: passwords are hashed (never stored in plain text), connections to our servers use TLS encryption in transit, and account data is stored with a reputable cloud infrastructure provider with access controls in place. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security — but because the large majority of your tracked data never reaches our servers in the first place, your overall exposure is limited to the specific flows described in this policy.</p>
+
+    <h2 id="retention">8. Data retention &amp; deletion</h2>
+    <p>Data stored only on your device persists until you delete it or uninstall the app — we have no visibility into or control over that. For account data: as long as your account is active, we retain your email, hashed password, and session records. Deleting your account from within Scrupel immediately erases your local device data and deletes your account record (email, hashed password, verification/reset tokens, and sessions) from our servers. Photos and audio submitted for lab import, vial scanning, or voice search are not retained by us after the request completes.</p>
+
+    <h2 id="children">9. Children's privacy</h2>
+    <p>Scrupel is not intended for anyone under 18 years old, and we do not knowingly collect information from anyone under 18. If we become aware that we have inadvertently collected information from someone under 18, we will delete it promptly. If you believe a minor has provided us information, contact us using the details in Section 18.</p>
+
+    <h2 id="health-law">10. Consumer health data notices</h2>
+    <p>Some states (including Washington and Nevada) have enacted laws that specifically regulate "consumer health data" collected by apps outside the traditional healthcare/HIPAA system. To the extent these laws apply to our processing of your information:</p>
+    <ul>
+      <li>We collect the health-related information described in this policy only with your affirmative action (creating entries, connecting Apple Health/Health Connect, or submitting a photo/audio clip to a specific feature) — never by default.</li>
+      <li>We do not use geofencing around any medical facility, and we do not sell consumer health data or use it for advertising.</li>
+      <li>You may withdraw consent to any of these features at any time (disconnecting Apple Health/Health Connect in your device settings, or simply not using lab import, vial scanning, or voice search), and you may request deletion of any consumer health data we hold using the contact information in Section 18.</li>
+    </ul>
+    <p>We are not a "covered entity" or "business associate" under the U.S. Health Insurance Portability and Accountability Act (HIPAA), and Scrupel is not a substitute for the privacy protections a healthcare provider or health plan would owe you directly.</p>
+
+    <h2 id="ccpa">11. California privacy rights (CCPA/CPRA)</h2>
+    <p>If you are a California resident, you have the right to know what personal information we collect and how we use it, to request deletion of your personal information, to correct inaccurate information, to opt out of the sale or sharing of personal information (we do not sell or share personal information, so this is not applicable in practice), and to not be discriminated against for exercising these rights. To submit a request, email us at <a href="mailto:support@scrupel.com">support@scrupel.com</a> with "CCPA Request" in the subject line; we may need to verify your identity before completing certain requests.</p>
+
+    <h2 id="utah">12. Utah privacy rights (UCPA)</h2>
+    <p>If you are a Utah resident, the Utah Consumer Privacy Act gives you the right to confirm whether we are processing your personal data, access it, delete it, obtain a portable copy of it, and opt out of its sale or use in targeted advertising (again, not applicable in practice, since we do neither). Submit requests using the contact information in Section 18.</p>
+
+    <h2 id="other-states">13. Other U.S. state privacy rights</h2>
+    <p>If you reside in a state with a comprehensive privacy law not specifically listed above, we will honor requests to access, correct, delete, or port your personal information, and requests to opt out of targeted advertising or sale, consistent with the rights that law provides, using the contact details in Section 18.</p>
+
+    <h2 id="international">14. International users</h2>
+    <p>Scrupel Labs LLC is based in the United States, and any information we process is processed in the United States. If you use Scrupel from outside the United States, you understand that your information will be transferred to, stored, and processed in the United States, which may have data protection laws different from those of your country.</p>
+
+    <h2 id="rights">15. Exercising your rights</h2>
+    <p>Regardless of where you live, you can always: delete your locally-stored data by deleting your entries or uninstalling the app; delete your account and associated server-side data from within the app's settings; and disconnect Apple Health / Health Connect from your device settings. For any other request — access, correction, portability, or a question about this policy — email <a href="mailto:support@scrupel.com">support@scrupel.com</a>. We aim to respond within 30 days.</p>
+
+    <h2 id="changes">16. Changes to this policy</h2>
+    <p>We may update this policy from time to time. We'll update the "Last updated" date above when we do, and if a change is material we'll make reasonable efforts to bring it to your attention (such as an in-app notice).</p>
+
+    <h2 id="medical">17. Medical disclaimer</h2>
+    <p>Scrupel is a personal tracking and organizational tool. It is not a medical device, does not provide medical advice, and is not a substitute for care from a licensed healthcare professional. See our <a href="terms.html#medical">Terms of Service</a> for the full medical disclaimer, which is incorporated into this policy by reference.</p>
+
+    <h2 id="contact">18. Contact us</h2>
+    <p>Scrupel Labs LLC<br>Utah, United States<br><a href="mailto:support@scrupel.com">support@scrupel.com</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>&copy; <span id="year"></span> Scrupel Labs LLC</span>
+      <span class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support@scrupel.com">support@scrupel.com</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
